@@ -49,7 +49,6 @@ messageController.signature = async function (ctx, next) {
 
 messageController.customReceive = async function (ctx, next) {
     let body = ctx.request.body;
-    console.log('body', body);
     let MsgType = body.MsgType;
     let param = {};
     param.access_token = ctx.state.$accessToken;
