@@ -11,6 +11,7 @@ const accessTokenMiddle = require('../middlewares/accessToken');
 
 //测试
 router.get('/test', accessTokenMiddle, messageController.test);
+router.get('/signature', messageController.signature);
 
 router.post('/templateSend', accessTokenMiddle,messageController.templateSend);
 router.get('/getOpenIdAndSessionkey', userController.getOpenIdAndSessionkey);

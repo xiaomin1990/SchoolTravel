@@ -43,6 +43,10 @@ messageController.test = async function (ctx, next) {
     }
 }
 
+messageController.signature = async function (ctx, next) {
+    ctx.body=ctx.query && ctx.query.echostr;
+}
+
 messageController.customReceive = async function (ctx, next) {
     let body = ctx.request.body;
     console.log('body', body);
